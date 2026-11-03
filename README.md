@@ -27,12 +27,13 @@ Many Uzebox boards (such as the [Uzebox Omega](https://uzebox.org/wiki/Omega)) a
 ```sh
 git clone https://github.com/Uzebox/uzebox.git
 ```
-- **The AVR C compiler**: avr-gcc with avr-libc, plus `make`. On Debian or Ubuntu Linux:
-```sh
-sudo apt install gcc-avr avr-libc binutils-avr make
-```
-  On Windows and macOS, install an AVR GCC toolchain package for your system.
-- **CUzeBox-ex** (CUEX), the Uzebox emulator, which has packages for Linux, Windows and macOS. Its program is called `cuzebox`.
+- **The AVR C compiler**: avr-gcc with avr-libc, plus `make`.
+
+The instructions for installing avr-gcc and the rest of the software required to build Uzebox programs for several platforms including Linux, Windows, macOS, *BSD UNIX and Haiku can be found in the Software Installation section of the [Getting Started on the Uzebox](https://uzebox.org/wiki/Getting_Started_on_the_Uzebox#Software_Installation) Uzebox wiki page.
+
+One of the strengths of the Uzebox are its lightweight and very portable SDK and set of development tools.
+
+- [**CUzeBox-ex** (CUEX)](https://github.com/weber21w/cuzebox-ex), the official and the most feature rich Uzebox emulator has ready-to-run binaries and executables for [Linux, Windows and macOS available on github.](https://github.com/weber21w/cuzebox-ex/releases)
 
 Make a folder for the game inside the Uzebox source, next to the other demos:
 ```sh
