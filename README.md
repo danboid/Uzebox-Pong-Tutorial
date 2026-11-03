@@ -649,11 +649,12 @@ where `gameinfo.properties` is a small text file with your game's details (see t
 
 ## Where next?
 
-Some ideas to practise with:
+Some ideas for further practice:
 - Let a second player control the right paddle with `ReadJoypad(1)`.
 - Make the ball speed up after each hit, or end the game at 5 points with a winner shown.
 - Draw your own tiles and sprites, or add more colours and sounds.
 - Read the mode 748 manual, `kernel/videoMode748/M748_Manual.rst`, to learn about its other row modes, scrolling and more.
+- Read the code for [IK 748](https://github.com/danboid/IK748) and try to understand how it works.
 
 ## The complete program
 
