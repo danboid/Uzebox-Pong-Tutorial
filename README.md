@@ -114,7 +114,14 @@ A **Makefile** tells `make` how to compile the kernel and your game and link the
 # Makefile for the Uzebox Mode 748 Pong tutorial
 GAME       = pong
 MCU        = atmega644
-KERNEL_DIR = ../../kernel
+# Where is the Uzebox kernel? make looks in the usual places next to or around
+# this folder; if yours is elsewhere, run:  make UZEBOX=/path/to/uzebox
+KERNEL_DIR ?= $(if $(UZEBOX),$(UZEBOX)/kernel,$(patsubst %/uzebox.h,%,$(firstword \
+              $(wildcard ../../kernel/uzebox.h ../../../kernel/uzebox.h \
+                         ../uzebox/kernel/uzebox.h ../../uzebox/kernel/uzebox.h))))
+ifeq ($(wildcard $(KERNEL_DIR)/uzebox.h)$(filter clean,$(MAKECMDGOALS)),)
+$(error Uzebox kernel not found. Run: make UZEBOX=/path/to/uzebox)
+endif
 
 CC      = avr-gcc
 OPTIONS = -DVIDEO_MODE=748 -DINTRO_LOGO=0 -DSOUND_MIXER=MIXER_TYPE_INLINE
@@ -149,6 +156,7 @@ clean:
 **Important:** the indented lines under each `name:` line must start with a **Tab**, not spaces. If `make` reports "missing separator", replace the leading spaces with a Tab.
 
 What it does:
+- `KERNEL_DIR` is where the Uzebox kernel is. `make` looks for it in the usual places around your game's folder (such as `uzebox/demos/pong`, as here); if it isn't found, it tells you to run `make UZEBOX=/path/to/uzebox`, giving the folder you cloned the Uzebox source into.
 - `OPTIONS` selects video mode 748, switches off the Uzebox logo at start-up, and picks the sound mixer.
 - `CFLAGS` are the compiler settings: the ATmega644 processor, its 28.6 MHz clock, optimise for size (`-Os`), and read `m74cfg.h` first.
 - `LDFLAGS` places the recolour table (see below) at a fixed flash address.

@@ -1,7 +1,14 @@
 # Makefile for the Uzebox Mode 748 Pong tutorial
 GAME       = pong
 MCU        = atmega644
-KERNEL_DIR = ../../kernel
+# Where is the Uzebox kernel? make looks in the usual places next to or around
+# this folder; if yours is elsewhere, run:  make UZEBOX=/path/to/uzebox
+KERNEL_DIR ?= $(if $(UZEBOX),$(UZEBOX)/kernel,$(patsubst %/uzebox.h,%,$(firstword \
+              $(wildcard ../../kernel/uzebox.h ../../../kernel/uzebox.h \
+                         ../uzebox/kernel/uzebox.h ../../uzebox/kernel/uzebox.h))))
+ifeq ($(wildcard $(KERNEL_DIR)/uzebox.h)$(filter clean,$(MAKECMDGOALS)),)
+$(error Uzebox kernel not found. Run: make UZEBOX=/path/to/uzebox)
+endif
 
 CC      = avr-gcc
 OPTIONS = -DVIDEO_MODE=748 -DINTRO_LOGO=0 -DSOUND_MIXER=MIXER_TYPE_INLINE
