@@ -531,7 +531,7 @@ static u8 digit_px(u8 x, u8 y, u8 d)
 for (c = 0; c < 10; c++) { make_tile(SPR_DIGIT0 + c, digit_px, c); }
 ```
 
-**A sound effect.** Uzebox sounds are described by [https://uzebox.org/wiki/Patch_Commands_Defined **patches**]: short lists of commands, each with a delay (in frames), a command and a value. Add this before the `game` comment line:
+**A sound effect.** Uzebox sounds are described by [https://uzebox.org/wiki/Patch_Commands_Defined](**patches**): short lists of commands, each with a delay (in frames), a command and a value. Add this before the `game` comment line:
 
 ```c
 /* ------------------------------------------------------------------- sound */
@@ -546,7 +546,7 @@ static const char bounce_sound[] PROGMEM = {
 static const struct PatchStruct patches[] PROGMEM = { {0, NULL, bounce_sound, 0, 0} };
 ```
 
-See here for more details on the [https://uzebox.org/wiki/Sound_Engine Uzebox sound engine].
+See here for more details on the [https://uzebox.org/wiki/Sound_Engine](Uzebox sound engine).
 
 **The finished game section.** Replace everything from the `game` comment line to the end with:
 
