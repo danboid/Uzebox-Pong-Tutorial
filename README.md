@@ -1,6 +1,6 @@
 # A beginner's guide to C and Uzebox games: Pong in video mode 748
 
-This tutorial teaches you enough C to write a complete game for the Uzebox: a version of the classic bat-and-ball game Pong, using video mode 748. No previous programming experience is assumed. We build the game in four steps, and every step is a program you can build and run.
+This tutorial teaches you enough C to write a complete game for the [Uzebox](https://uzebox.org/): a version of the classic bat-and-ball game [Pong](https://en.wikipedia.org/wiki/Pong), using [video mode 748](https://uzebox.org/wiki/SPI_RAM_video_modes). No previous programming experience is assumed. We build the game in four steps, and every step is a program you can build and run.
 
 ## Why C, and why the Uzebox?
 
@@ -17,7 +17,7 @@ The **Uzebox** is an ideal place to learn it. It is a fully open source games co
 
 The Uzebox's ATmega644 microcontroller has only **4 KB of RAM**. Most Uzebox video modes keep the screen's tile map and sprite graphics in that RAM, which leaves little for your game.
 
-Many Uzebox boards (such as the Uzebox Omega) also carry an **SPI RAM** chip: 128 KB of extra memory, connected to the microcontroller by a fast serial link called SPI. The microcontroller can't run code from it, but it can read and write data there very quickly.
+Many Uzebox boards (such as the [Uzebox Omega](https://uzebox.org/wiki/Omega)) also carry an [**SPI RAM**](https://uzebox.org/wiki/SPI_Ram) chip: 128 KB of extra memory, connected to the microcontroller by a fast serial link called SPI. The microcontroller can't run code from it, but it can read and write data there very quickly.
 
 **Video mode 748** is designed around SPI RAM. It reads the screen's tile maps and the sprite graphics from SPI RAM while drawing the picture, so they don't use the precious 4 KB of RAM. It also draws 192 pixels across in 16 colours, chosen from the Uzebox's 256. Mode 748 needs SPI RAM, so check that your board has it; the emulators provide it automatically.
 
