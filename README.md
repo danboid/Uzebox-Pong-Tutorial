@@ -548,6 +548,8 @@ static const struct PatchStruct patches[] PROGMEM = { {0, NULL, bounce_sound, 0,
 
 See here for more details on the [Uzebox sound engine](https://uzebox.org/wiki/Sound_Engine).
 
+[UzeSynth](https://github.com/danboid/UzeSynth-DPF) makes it easier to edit and hear Uzebox patches.
+
 **The finished game section.** Replace everything from the `game` comment line to the end with:
 
 ```c
