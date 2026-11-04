@@ -2,6 +2,8 @@
 
 This tutorial teaches you enough C to write a complete game for the [Uzebox](https://uzebox.org/): a version of the classic bat-and-ball game [Pong](https://en.wikipedia.org/wiki/Pong), using [video mode 748](https://uzebox.org/wiki/SPI_RAM_video_modes). No previous programming experience is assumed. We build the game in four steps, and every step is a program you can build and run.
 
+Each step's complete source, with its `Makefile` and `m74cfg.h`, is in this repository's [`step1`](step1), [`step2`](step2), [`step3`](step3) and [`step4`](step4) folders, so you can compare your code with a working version at any point.
+
 ## Why C, and why the Uzebox?
 
 **C** is one of the most widely used programming languages in the world. Operating systems, game consoles, microcontrollers and countless programs are written in it. Learning C is worth it because:
@@ -670,4 +672,4 @@ Some ideas for further practice:
 
 ## The complete program
 
-The finished program is [`step4/main.c`](step4/main.c). Each step's complete source, with its `Makefile` and `m74cfg.h`, is in this repository's [`step1`](step1), [`step2`](step2), [`step3`](step3) and [`step4`](step4) folders, so you can compare your code with a working version at any point.
+The finished program is [`step4/main.c`](step4/main.c).
