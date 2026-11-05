@@ -1,6 +1,6 @@
 # Converting markdown (.md) to PDF
 
-I converted the markdown assembly guide into a PDF under Debian using these commands:
+I converted the markdown into a PDF with Debian using these commands:
 
 ```
 sudo apt install pandoc weasyprint
