@@ -664,12 +664,18 @@ where `gameinfo.properties` is a small text file with your game's details (see t
 ## Where next?
 
 Some ideas for further practice:
+
 - Let a second player control the right paddle with `ReadJoypad(1)`.
 - Make the ball speed up after each hit, or end the game at 5 points with a winner shown.
 - Draw your own tiles and sprites, or add more colours and sounds.
-- Read the Uzebox wiki's [C Tips, Tricks and Optimizations](https://uzebox.org/wiki/C_Tips,_Tricks_and_Optimizations) page
-- Read the mode 748 manual, `kernel/videoMode748/M748_Manual.rst`, to learn about its other row modes, scrolling and more.
-- Read the code for [IK 748](https://github.com/danboid/IK748) and try to understand how it works.
+
+## Further reading
+
+- Check out the [Uzebox API.](https://uzebox.org/wiki/API_Functions)
+- Read the [mode 748 manual](https://github.com/Uzebox/uzebox/blob/master/kernel/videoMode748/M748_Manual.rst) to learn about its other row modes, scrolling and more.
+- Peruse the code for [IK 748](https://github.com/danboid/IK748) and try to understand how it works.
+- Scope the Uzebox wiki's [C Tips, Tricks and Optimizations](https://uzebox.org/wiki/C_Tips,_Tricks_and_Optimizations) page.
+
 
 Uzebox developers requiring more low-level AVR information should refer to the [avr-libc manual pages](https://www.nongnu.org/avr-libc/user-manual/pages.html).
 
