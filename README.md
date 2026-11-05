@@ -2,7 +2,7 @@
 
 This tutorial teaches you enough C to write a complete game for the [Uzebox](https://uzebox.org/): a version of the classic bat-and-ball game [Pong](https://en.wikipedia.org/wiki/Pong), using [video mode 748](https://uzebox.org/wiki/SPI_RAM_video_modes). No previous programming experience is assumed. We build the game in four steps, and every step is a program you can build and run.
 
-Each step's complete source, with its `Makefile` and `m74cfg.h`, is in this repository's [`step1`](step1), [`step2`](step2), [`step3`](step3) and [`step4`](step4) folders, so you can compare your code with a working version at any point.
+Each step's complete source, with its `Makefile` and `m74cfg.h`, is in this repository's [`step1`](https://github.com/danboid/Uzebox-Pong-Tutorial/tree/main/step1), [`step2`](https://github.com/danboid/Uzebox-Pong-Tutorial/tree/main/step2), [`step3`](https://github.com/danboid/Uzebox-Pong-Tutorial/tree/main/step3) and [`step4`](https://github.com/danboid/Uzebox-Pong-Tutorial/tree/main/step4) folders, so you can compare your code with a working version at any point.
 
 ## Why C, and why the Uzebox?
 
@@ -667,9 +667,14 @@ Some ideas for further practice:
 - Let a second player control the right paddle with `ReadJoypad(1)`.
 - Make the ball speed up after each hit, or end the game at 5 points with a winner shown.
 - Draw your own tiles and sprites, or add more colours and sounds.
+- Read the Uzebox wiki's [C Tips, Tricks and Optimizations](https://uzebox.org/wiki/C_Tips,_Tricks_and_Optimizations) page
 - Read the mode 748 manual, `kernel/videoMode748/M748_Manual.rst`, to learn about its other row modes, scrolling and more.
 - Read the code for [IK 748](https://github.com/danboid/IK748) and try to understand how it works.
 
+Uzebox developers requiring more low-level AVR information should refer to the [avr-libc manual pages](https://www.nongnu.org/avr-libc/user-manual/pages.html).
+
+If you have Uzebox related questions you may get an answer on the [Uzebox forum.](https://uzebox.org/forums/index.php)
+
 ## The complete program
 
-The finished program is [`step4/main.c`](step4/main.c).
+The finished program is [`step4/main.c`](https://github.com/danboid/Uzebox-Pong-Tutorial/tree/main/step4/main.c).
